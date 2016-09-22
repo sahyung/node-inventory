@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+    <HGrid247>
+        <Each>
+            <name> Transformator_1467275949839</name>
+            <ID> 1467275949839</ID>
+            <label> Transformator_1</label>
+            <prevPipe> </prevPipe>
+           <type> EACH</type>
+            <pipeName> Transformator_1467275949839</pipeName>
+            <maxPrevNode> 0</maxPrevNode>
+            <flowName> </flowName>
+            <inFields> line</inFields>
+            <outFields> NAMA,EMAIL</outFields>
+            <inFieldsType> String</inFieldsType>
+            <outFieldsType> String,String</outFieldsType>
+            <posx> 334.0</posx>
+            <posy> 213.0</posy>
+            <tinggi> 42</tinggi>
+            <lebar> 101</lebar>
+            <enabled> true</enabled>
+            <enabledCounter> true</enabledCounter>
+            <description> </description>
+            <argumentSelector> </argumentSelector>
+            <outputSelector> </outputSelector>
+            <fieldDeclaration> </fieldDeclaration>
+            <posxIR> 22</posxIR>
+            <posyIR> 22</posyIR>
+            <posxOR> 500</posxOR>
+            <posyOR> 20</posyOR>
+            <widhtIR> 200</widhtIR>
+            <heightIR> 37</heightIR>
+            <widthOR> 200</widthOR>
+            <heightOR> 54</heightOR>
+            <filterInstance> </filterInstance>
+            <chaining> false</chaining>
+        </Each>
+        <Transform>
+            <parentID> 1467275949839</parentID>
+            <prevIDS> </prevIDS>
+            <nextIDS> </nextIDS>
+            <ID> 1467276060402</ID>
+            <name> cascading.solusi247.transform.string.StringSplitter</name>
+            <label> StringSplitter(|)</label>
+            <input> line</input>
+            <output> NAMA, EMAIL</output>
+            <parameter> pip_sign</parameter>
+            <posx> 312</posx>
+            <posy> 107</posy>
+            <inputCount> 3</inputCount>
+            <outputCount> 2</outputCount>
+            <codeString> </codeString>
+            <expressionString> </expressionString>
+            <defaultString> </defaultString>
+            <extraInfo> 0isnn_sign/home/asep/Downloads/dataJunmin_sign30min_sign2016ttk_signcsv</extraInfo>
+            <udf> false</udf>
+        </Transform>
+        <Pipe2Hfs>
+            <fromID> 1467275949839</fromID>
+            <toID> 1467275956945</toID>
+        </Pipe2Hfs>
+        <HfsSource>
+            <fields> </fields>
+            <path> </path>
+            <sinkMode> </sinkMode>
+            <label> Hfs_source_1</label>
+             <hfsName> Hfs_source_1467275932933</hfsName>
+            <ID> 1467275932933</ID>
+            <type> HFSSOURCE</type>
+            <posx> 183.0</posx>
+            <posy> 204.0</posy>
+            <inputdir> </inputdir>
+            <outputdir> </outputdir>
+            <testdir> </testdir>
+            <tableHeader> </tableHeader>
+            <outputWithDate>false</outputWithDate>
+            <headerDelimited>	</headerDelimited>
+            <outputFormat>hgrid247-#####</outputFormat>
+            <fileType> Hfs</fileType>
+            <fieldNames> </fieldNames>
+            <enabled> true</enabled>
+            <enabledCounter> true</enabledCounter>
+            <argumentOrder> 0</argumentOrder>
+            <description> </description>
+            <schemeClass> TextLine</schemeClass>
+            <delimiter> </delimiter>
+            <fieldGroupPartition> </fieldGroupPartition>
+            <incomingFields> </incomingFields>
+            <partDelimiter> </partDelimiter>
+            <partIndex> </partIndex>
+            <rejectedHfs> false</rejectedHfs>
+            <sourceFields> </sourceFields>
+            <sinkFields> </sinkFields>
+            <numSinkPart> </numSinkPart>
+             <combined>false</combined>
+             <includeFile>false</includeFile>
+        </HfsSource>
+        <Hfs2Pipe>
+            <fromID> 1467275932933</fromID>
+            <toID> 1467275949839</toID>
+        </Hfs2Pipe>
+        <HfsSink>
+            <fields> </fields>
+            <path> output_Hfs_sink_1467275956945</path>
+            <sinkMode> SinkMode.REPLACE</sinkMode>
+            <label> Hfs_sink_1</label>
+             <hfsName> Hfs_sink_1467275956945</hfsName>
+            <ID> 1467275956945</ID>
+            <type> HFSSINK</type>
+            <posx> 479.0</posx>
+            <posy> 212.0</posy>
+            <inputdir> </inputdir>
+            <outputdir> </outputdir>
+            <testdir> </testdir>
+            <tableHeader> </tableHeader>
+            <outputWithDate>false</outputWithDate>
+            <headerDelimited>	</headerDelimited>
+            <outputFormat>hgrid247-#####</outputFormat>
+            <fileType> Hfs</fileType>
+            <fieldNames> </fieldNames>
+            <enabled> true</enabled>
+            <enabledCounter> true</enabledCounter>
+            <argumentOrder> 1</argumentOrder>
+            <description> </description>
+            <schemeClass> </schemeClass>
+            <delimiter> </delimiter>
+            <fieldGroupPartition> </fieldGroupPartition>
+            <incomingFields> NAMA,EMAIL</incomingFields>
+            <partDelimiter> |</partDelimiter>
+            <partIndex> </partIndex>
+            <rejectedHfs> false</rejectedHfs>
+            <sourceFields> </sourceFields>
+            <sinkFields> </sinkFields>
+            <numSinkPart> </numSinkPart>
+        </HfsSink>
+        <FlowProperty>
+            <ReducerNumber> Default</ReducerNumber>
+            <MapNumber> Default</MapNumber>
+            <actionInputDir> L</actionInputDir>
+            <compresstype> DefaultCodec</compresstype>
+            <jobTrackerUrl> localhost:50030</jobTrackerUrl>
+            <graphDisplay> false</graphDisplay>
+            <mapOutputCompressed> false</mapOutputCompressed>
+            <description> </description>
+            <logPath> </logPath>
+            <speculativeExecution> </speculativeExecution>
+            <ingoreUnexistsPath> No</ingoreUnexistsPath>
+            <combinedInput> false</combinedInput>
+            <maxSplitSize> 128</maxSplitSize>
+            <fileNdelimiter> No,|</fileNdelimiter>
+            <reuseJVM> false</reuseJVM>
+            <zoom> 1.0</zoom>
+            <jobConf> </jobConf>
+            <logLoc> Local</logLoc>
+        </FlowProperty>
+    </HGrid247>
